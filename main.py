@@ -1,6 +1,4 @@
-from menu import *
 from dicc_inici import *
-
 
 
 while(True):
