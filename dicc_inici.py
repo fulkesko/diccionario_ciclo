@@ -1,4 +1,5 @@
 from datetime import datetime
+from PIL import Image
 
 re_nacidos = list()
 
@@ -40,16 +41,23 @@ def ingreso():
         edad = list()
 
 def mostrar_todo():
-    for nin in re_nacidos:
-        print("nombre: ",nin['nom'])
-        print("edad: ")
-        print("     ",nin['edad'][0],"años")
-        print("     ",nin['edad'][1],"meses")
-        print("     ",nin['edad'][2],"dias")
+    tamaño = re_nacidos.__len__()
 
+    if(tamaño == 0):
+        portada = Image.open("nada.jpg")
+        portada.show()
+    else:
+        for nin in re_nacidos:
+            print("nombre: ",nin['nom'])
+            print("edad: ")
+            print("     ",nin['edad'][0],"años")
+            print("     ",nin['edad'][1],"meses")
+            print("     ",nin['edad'][2],"dias")
+            print("♪   ♪   ♪   ♪   ♪   ♪   ♪   ♪")
 def menu():
     print(" ")
-    print ("a) ingreso de recien nacido ")
-    print ("b) mostrar bebés ")
-    print ("c) salir")
-    print("----------------------------")
+    print("sistema de registro de recien nacidos")
+    print("a) ingreso de recien nacido ")
+    print("b) mostrar bebés ")
+    print("c) salir")
+    print("♪   ♪   ♪   ♪   ♪   ♪   ♪   ♪")
