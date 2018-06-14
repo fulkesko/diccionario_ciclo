@@ -4,15 +4,16 @@ from dicc_inici import *
 while(True):
     menu()
     opcion = input("eliga un opción: ")
-    opcion = opcion.lower()
+    opcion = opcion.lower().strip()
     print("----------------------------")
 
-    if (opcion == "a"):
+    if (opcion.__contains__("a")):
         ingreso()
-    elif (opcion == "b"):
-        mostrar()
-    elif (opcion == "c"):
+    elif (opcion.__contains__("b")):
+        mostrar_todo()
+    elif (opcion.__contains__("c")):
         break
+        
 print ("vuelva pronto")
 
 

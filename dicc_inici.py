@@ -48,7 +48,7 @@ def mostrar_todo():
         print("     ",nin['edad'][2],"dias")
 
 def menu():
-    print("----------------------------")
+    print(" ")
     print ("a) ingreso de recien nacido ")
     print ("b) mostrar bebés ")
     print ("c) salir")
